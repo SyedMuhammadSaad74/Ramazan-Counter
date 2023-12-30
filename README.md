@@ -1,3 +1,3 @@
 # Ramazan-Counter
-https://incandescent-rolypoly-23f449.netlify.app
+https://elegant-nougat-380f8e.netlify.app
 
