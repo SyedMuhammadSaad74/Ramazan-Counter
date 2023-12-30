@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramazan Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1><span>RAMAZAN</span> COUNTER</h1>
+        <div class="launch-time">
+            <div>
+                <p id="days">00</p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p id="hours">00</p>
+                <span>Hr</span>
+            </div>
+            <div>
+                <p id="minutes">00</p>
+                <span>Min</span>
+            </div>
+            <div>
+                <p id="second">00</p>
+                <span>Sec</span>
+            </div>
+
+        </div>
+        <script>
+            var countDownDate = new Date("Mar 10, 2024").getTime();
+            var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var min = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var sec = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = min;
+                document.getElementById("second").innerHTML = sec;
+
+
+
+
+            }, 1000);
+
+        </script>
+
+
+    </div>
+</body>
+
+</html>
